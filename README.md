@@ -1,2 +1,13 @@
-# hahlama
-Hahlama Specialist Hospital is home where your health and wellbeing is important to us. When it comes to staying well, physically, emotionally, and financially, we are with you all the way.
+# Covstar - Hahlama Specialist Hospital
+
+![Design preview for the Hahlama specialist hospital](./designs/desktop-preview.jpg)
+
+## Welcome! 👋
+
+Thanks for checking out this Website Designed By Covstar.
+
+
+## Got feedback for us?
+
+We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email covstardesigns[at]gmail[dot]com.
+

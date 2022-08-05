@@ -1,0 +1,447 @@
+/* MOBILE RESPONSIVE DESIGN */
+@media(max-width: 720px){
+    h1,
+    h2,
+    h3,
+    h5,
+    h6 {
+        font-weight: 700;
+        letter-spacing: normal;
+    }
+    /* nav-section */
+    nav {
+        padding: 2rem 10%;
+       
+    }
+    .desktop{
+        display: none;
+        visibility: hidden;
+    }
+    .mobile{
+        display: block;
+        visibility: visible;
+    }
+    .hamburger{
+        display: block;
+        
+    }
+
+    .nav-links ul{
+        display: block;
+        margin-top: 1rem;
+        
+    }
+    .nav-links ul li{
+        padding: .4rem 0;
+    }
+    .nav-links a{
+        color: hsl(0, 0%, 100%);
+    }
+    .nav-links a:hover {
+            color: hsl(212, 100%, 10%);
+    }
+    .overlay {
+        height: 100vh;
+        background-color: hsla(0, 0%, 8%, 0.578);
+        top: 5.5rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        display: none;
+    }
+   .mobile .nav-links{
+        text-align: right;
+        position: absolute;
+        top: 5.5rem;
+        width: 60%;
+        height: 100vh;
+        right: 0%;
+        background-color: hsl(200, 87%, 57%);
+        display: none;
+        padding: 2rem 2rem;
+        border-radius: 0 0 5px 5px;
+    }
+    
+    .nav-links .services-dropdown li{
+        all: unset;
+        display: block;
+    }
+    .nav-links .services-dropdown{
+        position: relative;
+        left: auto;
+        top: auto;
+        border-radius: 0;
+        margin: 1rem -2rem 0;
+        }
+   
+
+    /* active link */
+    .mobile .active {
+            margin-bottom: .5rem;
+        }
+    .active a{
+        padding: .5rem ;
+        background-color: hsl(200, 100%, 14%);
+    }
+    .active a:hover {
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(212, 100%, 14%);
+    }
+    /* header section */
+    header {
+        background-position: 50% 100%;
+        background-size: 150% 100%;
+        background-image:
+            linear-gradient(60deg, hsla(0, 0%, 0%, 0.879), hsla(200, 100%, 27%, 0.622) 115%), url('../images/assets/hero-bg.jpg');
+    }
+    .team-section::before,
+    .testimonial-section::before,
+    footer::before {
+        height: 40px;
+    }
+    header::after,
+    .team-section::after {
+        height: 40px;
+
+    }
+    .hero {
+        padding: 6rem 10% 8rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "heroimg"
+            "herotext";
+        column-gap: normal;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        padding:  0 0rem;
+        grid-area: herotext;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        text-shadow: unset;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+    /* hero img and roatating icon */
+    .hero-img {
+        grid-area: heroimg;
+        margin-top: -5rem;
+    }
+    .hero-img img {
+        width: 25rem;
+    }
+        .rotating-logo img {
+            width: 3rem;
+        }
+    
+    .rotating-logo {
+        top: 20.2rem;
+        left: 15.5rem;
+    }
+    /* scroll down */
+    .scroll-down {
+        padding: 0rem 0 9rem;
+    }
+    /* main section */
+
+    main {
+        padding: 5rem 0;
+    }
+    /* services section */
+
+    .service-img {
+        position: absolute;
+        top: -8rem;
+        right: 0rem;
+    }
+
+    .service-img img {
+        width: 10rem;
+    }
+    .services-heading {
+        text-align: center;
+        padding-bottom: 4rem;
+    }
+    .service-container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: normal;
+
+    }
+    .service{
+        margin-bottom: 4rem;
+        width: 100%;
+        
+    }
+    .more-services {
+
+        padding: 0rem 0 0;
+    }
+        /* Team section */
+    .team-img {
+        left: -2rem;
+    }
+    
+    .team-section {
+        padding: 7rem 2% 3rem;
+        background-size: 750% 100%;
+    }
+    .team-section h2{
+        padding: 0 10%;
+    }
+    .cards {
+        column-gap: 1rem;
+        row-gap: 6rem;
+        
+    }
+    .card-body{
+        width: 10rem;
+        padding: 4rem 1rem 2rem;
+    }
+    .card-img{
+        top: -3rem;
+    }
+    .card-img img{
+        width: 5rem;
+    }/* About section */
+    .about-section {
+        padding: 5rem 0 8rem;
+    }
+    .about-section h2,
+    .testimonial-section h2,
+    .pricing-section h2 {
+        font-size: 2rem;
+        padding: 4rem 0;
+    }
+    .heart img,
+    .beat img,
+    .scan img,
+    .price-img img,
+    .contactImg1 img, .team-img img {
+        width: 15rem;
+    }
+    .heart,
+    .beat {
+        right: 0rem;
+    }
+    .scan {
+        left: -2rem;
+        bottom: -43rem;
+    }
+    .swiper {
+
+        border-radius: 0px;
+    }
+    .swiper-slide p,
+    .swiper-slide li {
+        font-size: .9rem;
+    }
+    .swiper-slide p {
+        padding: 5rem 20%;
+        line-height: 1.7;
+    }
+    .swiper h3 {
+        font-size: 1.4rem;
+        padding: 2rem 0 0;
+    }
+        /* testimonial section */
+    
+    .testimonial-section {
+        padding: 2rem 10% 5rem;
+        background-position: 80% 10rem;
+    }
+    .testimonials {
+      
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        grid-template-areas: "test1"
+            "test2"
+            "test3"
+            "test4";
+    }
+    .testimonial {
+        width: unset;
+        margin: 1rem 0;
+    }
+    .patients-ratings {
+        justify-content: center;
+    }
+        /* Pricing and booking section */
+    
+    .pricing-section {
+        padding: 2rem 10% 10rem;
+    }
+    .pricing-section h2{
+        padding: 2rem 0;
+    }
+    .price-img {
+        top: -6rem;
+    }
+    /* Contact Us section */
+    .contact-section {
+        grid-template-columns: 100%;
+        padding: 5rem 0 2rem;
+    }
+    .contactImg1 {
+        position: absolute;
+        top: -7rem;
+    }
+    .contactImg1 img{
+        width: 10rem;
+    }
+    .contactImg2 {
+        top: 9rem;
+    }
+    .client-name input,
+    .client-email input {
+        width: 70%;
+    }
+    .client-message textarea {
+        height: 10rem;
+        width: 90%;
+    }
+        /* footer section */
+    
+    footer {
+        padding: 10rem 10% 0;
+        margin-top: 2rem;
+    }
+    .footer-img img {
+        width: 13rem;
+    }
+
+    .footer-section {
+        margin-bottom: 0rem;
+        display: block;
+    }
+    .footer-img {
+        margin: -4rem 0 2rem;
+    }
+    footer ul {
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+    .social {
+       justify-content: center;
+    }
+}
+
+@media(max-width:1200px) and (min-width:721px){
+    /* nav section */
+    nav {
+        padding: 2.5rem 5%;
+    }.nav-links ul {
+        column-gap: 1.5rem;
+    }
+    .nav-links .services-dropdown{
+        top: 3.4rem;
+    }
+    .nav-logo img {
+        width: 8rem;
+        position: relative;
+    }
+    .nav-links a{
+        font-size: .7rem;
+    }
+    .active a{
+        padding: .5rem 1rem;
+    }
+    .hero {
+        padding: 1rem 5% 4rem;
+        column-gap: 2rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero-text{
+        padding: 7rem 0 5rem;
+    }
+    .hero-text p{
+        font-size: 1rem;
+    }
+    .hero-img img {
+        width: 25rem;
+    }
+    .rotating-logo img {
+        width: 3rem;
+    }
+    .rotating-logo {
+        top: 20.5rem;
+        left: 15.7rem;
+    }
+    /* services section */
+    .service-img img, .service, .team-img img, .heart img,
+    .beat img,
+    .scan img,
+    .price-img img,
+    .contactImg1 img {
+        width: 15rem;
+    }
+    .service-container {
+        flex-wrap: wrap;
+        column-gap: 4rem;
+        row-gap: 4rem;
+
+    }
+    .service p {
+        font-size: .9rem;
+    }
+        /* testimonial section */
+    .testimonial-section {
+        padding: 2rem 5% 5rem;
+    }
+    .testimonials {
+        column-gap: 2rem;
+    }
+    .heart,
+    .beat {
+        right: 0;
+    }
+    /* Contact Us section */
+    .contact-section {
+        grid-template-columns: 100%;
+        padding: 5rem 0 2rem;
+    }
+
+    .contactImg1 {
+        position: absolute;
+        top: -7rem;
+    }
+
+    .footer-img img, .contactImg1 img {
+        width: 10rem;
+    }
+
+    .contactImg2 {
+        top: 3rem;
+    }
+
+    .client-name input,
+    .client-email input {
+        width: 70%;
+    }
+
+    .client-message textarea {
+        height: 10rem;
+        width: 90%;
+    }
+    /* footer section */
+    
+    footer {
+        padding: 12rem 5% 0;
+    }
+    .footer-img {
+        margin-top: -5rem;
+    }
+    .footer-section {
+        justify-content: center;
+        grid-template-columns: 1fr 10rem 10rem 1fr;
+    }
+}

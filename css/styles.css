@@ -1,0 +1,793 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Open Sans";
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+h1, h2, h3, h5, h6{
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+/* scroll to top button  */
+.scrollTop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    padding: .5rem 1rem;
+    background-color: hsl(200, 100%, 19%);
+    border: none;
+    box-shadow: 0px 0px 20px hsla(198, 75%, 14%, 0.11);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.scrollTop i{
+    color: hsl(0, 0%, 100%);
+}
+/* overflows */
+.team-section,
+.testimonial-section,
+footer, header{
+    overflow: hidden;
+}
+/* flex display */
+nav, .nav-links ul, .hero, .service-container, .card-body ul, .pricings,
+.patients-ratings,
+.cards{
+    display: flex;
+}
+
+/* nav section */
+nav {
+    padding: 2.5rem 10%;
+    position: relative;
+    z-index: 222;
+}
+.desktop{
+    visibility: visible;
+}
+.mobile{
+    display: none;
+    visibility: hidden;
+}
+.hamburger, .close{
+    position: absolute;
+    right: 10%;
+    top: 2rem;
+    display: none;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.nav-logo{
+    margin-top: -1rem;
+}
+.nav-logo img, .footer-img img{
+    width: 10rem;
+    position: relative;
+}
+
+.nav-links{
+    margin-left: auto;
+    position: relative;
+}
+.nav-links ul{
+    column-gap: 2.5rem;
+}
+.nav-links a{
+    text-decoration: none;
+    color: hsl(200, 99%, 29%);
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+    color: hsl(212, 100%, 10%);
+}
+.active a {
+    padding: .8rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(200, 100%, 19%);
+    transition: .4s;
+}
+
+.active a:hover {
+    background-color: hsl(200, 87%,
+        57%);
+    color: hsl(212, 100%, 10%);
+    transition: .4s;
+}
+.nav-links .services-dropdown{
+    display: none;
+    line-height: 1.8;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem 2rem;
+    position: absolute;
+    z-index: 2;
+    top: 4rem;
+    left: -3rem;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 0px 20px hsla(198, 75%, 14%, 0.11);
+}
+.nav-links .services-dropdown a{
+    color: hsl(200, 87%, 57%);
+}
+.nav-links .services-dropdown a:hover {
+    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+    transition: all .3s;
+    text-decoration: underline;
+}
+.services-links{
+   position: relative; 
+}
+.services a i{
+    padding-left: .5rem;
+}
+
+
+/* header section */
+header{
+    background-image: 
+        linear-gradient(90deg, hsla(0, 0%, 0%, 0.659), hsla(200, 87%, 57%, 0.834) 115%), url('../images/assets/hero-bg.jpg');
+        background-position: center;
+        background-size: cover;
+    position: relative;
+    top: -1rem;
+}
+ .team-section::before, footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: calc(101% + 1.3px);
+    height: 100px;
+    left: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background: url("../images/assets/waves.svg");
+}
+header::after, .team-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: calc(101% + 1.3px);
+    height: 100px;
+    left: 0;
+    transform: rotate(180deg);
+    z-index: 0;
+    background-repeat: no-repeat;
+    background: url("../images/assets/waves.svg");
+}
+.hero{
+    padding: 3rem 10% 4rem;
+    column-gap: 3rem;
+}
+.hero-text{
+    padding: 12rem 0 0;
+    z-index: 100;
+}
+.hero h1{
+    font-size: 3.8rem;
+    line-height: 1.1;
+    text-shadow: 0px 1px hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+}
+.hero-text p{
+    color: white;
+    padding: 1.5rem 0 3rem;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-family: "karla";
+}
+.hero-text a button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: hsl(200, 87%, 57%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    transition: .4s;
+}
+.hero-text a button i{
+    padding-left: .5rem;
+}
+.hero-text a button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(200, 87%, 57%);
+    transition: .4s;
+}
+/* hero img and roatating icon */
+.hero-img{
+    padding-top: 1rem;
+    position: relative;
+}
+.hero-img img{
+    width: 35rem;
+}
+.rotating-logo img{
+    width: 4rem;
+}
+.rotating-logo{
+    position: absolute;
+    top: 28rem;
+    left: 22.5rem;
+    animation: orbit 4s linear infinite;
+}
+@keyframes orbit{
+    from {
+        transform:  translateX(10px) rotate(0deg);
+    }
+    to{
+    transform:  translateX(10px) rotate(360deg);
+    }
+}
+
+/* scroll down */
+.scroll-down{
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: 0rem 0 6rem;
+    margin-top: -3rem;
+}
+.scroll-down a{
+    text-decoration: none;
+    color: white;
+    font-family: "karla";
+}
+@keyframes pulsate
+{
+    0% {
+        margin-bottom: .5rem;
+    }
+    50%{
+        margin-top: .5rem;
+    }
+    100%{
+        margin-bottom: .5rem;
+    }
+
+}.scroll-down i{
+    color: white;
+    position: absolute;
+    z-index: 2;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    animation: pulsate 2s infinite;
+}
+
+/* main section */
+
+main{
+    padding: 8rem 0;
+    position: relative;
+}
+
+/* services section */
+.services-section{
+    padding: 0 10% 8rem;
+    position: relative;
+}
+.service-img{
+    position: absolute;
+    top: -8rem;
+    right: 0;
+}
+.service-img img{
+    width: 25rem;
+}
+.services-heading{
+    text-align: center;
+    padding-bottom: 7rem;
+}
+.background{
+    font-size: 4rem;
+    position: absolute;
+    color: hsl(200, 87%, 57%);
+    top: -2rem;
+    left: 0;
+    z-index: 0;
+}
+.service-eye{
+    font-size: 2.5rem;
+    padding: 0 0;
+    position: relative;
+    color: hsla(200, 87%, 57%, 0.347);
+}
+.services-heading h2, .about-section h2, .testimonial-section h2, .pricing-section h2, .contact-section h2{
+    color: hsl(200, 99%, 29%);
+    font-size: 2rem;
+}
+.service-container{
+    column-gap: 5%;
+    justify-content: center;
+}
+.service{
+    padding: 1.5rem 2rem 2rem;
+    background-color: hsl(0, 0%, 100%);
+    position: relative;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: inset -10px -10px 20px hsla(200, 87%, 57%, 0.347),
+    inset 10px 10px 20px #ffffff;
+
+}
+.service h3{
+    padding: 1rem 0;
+    color: hsl(200, 99%, 29%);
+}
+.service p{
+    line-height: 1.8;
+}
+.more-services{
+    text-align: center;
+    padding: 4rem 0 0;
+}
+.more-services a{
+    text-decoration: none;
+    color: hsl(200, 87%, 57%);
+    border: 2px solid hsla(200, 87%, 57%, 0.347);
+    padding: .7rem 1rem;
+    border-radius: 5px;
+    transition: .4s;
+}
+.more-services a:hover{
+    color: hsl(212, 100%, 10%);
+    transition: .3s;
+    border: 2px solid hsl(212, 100%, 10%);
+    transition: .4s;
+}
+.more-services i{
+    padding-left: .4rem;
+}
+.team-img {
+    position: absolute;
+    bottom: -8rem;
+    z-index: 2;
+    left: 0rem;
+}
+
+/* Team section */
+.team-section{
+    padding: 7rem 10% 3rem;
+    background-image: linear-gradient(95deg, hsla(200, 99%, 29%, 0.727), hsl(200, 99%, 29%) 95%), url("../images/assets/Doctors.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+}
+
+
+.team-img img {
+    width: 20rem;
+}
+.team-section h2{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+/* cards */
+.cards{
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 6rem;
+    padding: 8rem 0;
+    justify-content: center;
+}
+.card-body{
+    background-color: hsl(212, 100%, 10%);
+    border-radius: 5px;
+    padding: 5rem 1rem 2rem;
+    text-align: center;
+    width: 15rem;
+    position: relative;
+    box-shadow: inset -2px -2px 5px hsl(0, 0%, 100%),
+            inset 2px 2px 5px hsl(0, 0%, 100%);
+}
+.card-img{
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    right: 0;
+}
+ .card-img img{
+    width: 50%;
+    padding: .5rem;
+    background-color: hsl(200, 87%, 57%);
+     border: 5px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+.card-body h4{
+    padding: 1rem 0 0;
+    color: hsl(0, 0%, 100%);
+}
+.card-body p{
+    font-size: .9rem;
+    padding: 1rem 0;
+    color: hsl(0, 0%, 93%);
+}
+.card-body ul{
+    padding: .3rem 0 0;
+    column-gap: .8rem;
+    justify-content: center;
+}
+.card-body ul li i, .social li i{
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+    padding: .5rem;
+    width: 50%;
+}
+.card-body ul li i:hover, .social li i:hover{
+    color: hsl(200, 87%, 57%);
+    border: 1px solid hsl(200, 87%, 57%);
+}
+.card-body i{
+    font-size: .9rem;
+}
+
+/* About section */
+.about-section{
+    padding: 8rem 10% 13rem;
+}
+.heart-img{
+    position: relative;
+}
+.heart{
+    z-index: 2;
+}
+.heart img, .beat img, .scan img, .price-img img, .contactImg1 img{
+    width: 20rem;
+}
+.heart, .beat{
+    position: absolute;
+    top: -16rem;
+    right: -5rem;
+}
+.scan{
+    position: absolute;
+    left: -5rem;
+    z-index: 2;
+    bottom: -43rem;
+
+
+}
+.about-section h2, .testimonial-section h2, .pricing-section h2{
+    text-align: center;
+    font-size: 2.6rem;
+    padding: 4rem 0 ;
+}
+.swiper{
+    width: 100%;
+    height: 25rem;
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+.swiper-button-next, .swiper-button-prev{
+    padding: 0 1rem;
+    color: hsl(0, 0%, 100%);
+}
+.swiper-slide p, .swiper-slide li{
+    font-size: 1.1rem;
+}
+.swiper-pagination{
+    padding: 1rem 0;
+}
+.swiper-slide ul{
+    padding-top: 2rem;
+    list-style: circle;
+}
+.swiper-slide{
+    background-color: hsl(200, 87%, 57%);
+    padding: 2rem 0;
+}
+.swiper-slide p{
+    padding: 2rem 20%;
+    line-height: 1.7;
+}
+.swiper-slide li{
+    padding: .5rem 20%;
+}
+.swiper-slide b{
+    text-decoration: solid;
+}
+.swiper h3{
+    text-align: center;
+    font-size: 1.9rem;
+    padding: 4rem 0 0;
+    letter-spacing: normal;
+}
+
+/* testimonial section */
+
+.testimonial-section{
+    padding: 2rem 10% 5rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.373), white), url("../images/assets/Blood-donation-bro.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 10rem;
+        background-size: cover;
+    position: relative;
+}
+.testimonials{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "test1 test2"
+    "test3 test4";
+}
+.testimonial-section h2{
+    letter-spacing: normal;
+
+}
+.testimonial{
+    width: 80%;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+}
+.testimonial1{
+    grid-area: test1;
+}
+.testimonial2{
+        grid-area: test2;
+    
+}
+.testimonial3{
+        grid-area: test3;
+}
+.testimonial4{
+        grid-area: test4;
+}
+.patients-ratings{
+    padding: 1.5rem 0 0;
+}
+.patients-ratings h4{
+    font-size: .9rem;
+    padding-top: .3rem;
+}
+.testimonial p{
+    text-align: center;
+    line-height: 1.5;
+    text-indent: 5px;
+}
+.patients-ratings i{
+    font-size: .9rem;
+    color: yellow;
+}
+.patient-img{
+    padding-right: 1rem;
+}
+.patient-img img{
+    width: 3rem;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 100%;
+}
+
+/* Pricing and booking section */
+
+.pricing-section{
+    padding: 3rem 10% 10rem;
+    position: relative;
+    background-color: hsl(200, 87%, 57%);
+}
+.pricing-section h2{
+    color: hsl(0, 0%, 100%);
+}
+.pricings{
+    padding: 2rem 0 0;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 4rem;
+    text-align: center;
+    justify-content: center;
+}
+.price-img{
+    position: absolute;
+    right: 0;
+    top: -9rem;
+}
+.price-card{
+    box-shadow: 0 10px 15px hsla(200, 100%, 12%, 0.395);
+    width: 18rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+.price-heading{
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(200, 100%, 19%);
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid hsla(198, 75%, 14%, 0.11);
+}
+.price-card-body{
+    padding: 1rem 2rem 2rem;
+}
+hr{
+    margin: 0 -2rem;
+    border-width: 1px 0 0;
+    border-top-color: hsla(200, 100%, 19%, 0.284);
+}
+.price-card-title{
+    font-size: 1.3rem;
+    letter-spacing: normal;
+    margin-bottom: 1rem;
+    line-height: 2;
+    opacity: .7;
+    border-bottom: 1px solid hsla(200, 100%, 19%, 0.411);
+}
+.price-card-text{
+    padding: .5rem 0;
+    color: hsla(200, 97%, 12%, 0.668);
+   
+}
+.price-link button{
+    cursor: pointer;
+    margin-top: 2rem;
+    border-radius: 100px;
+    border: 2px solid hsl(212, 100%, 10%);
+    background: none;
+    padding: .7rem 0;
+    width: 100%;
+    color: hsl(212, 100%, 10%);
+    transition: .4s;
+}
+.price-link button:hover{
+    background-color: hsl(212, 100%, 10%);
+    color: hsl(0, 0%, 100%);
+}
+.standard {
+    transform: scale(1.15);
+}
+.standard button {
+    background-color: hsl(212, 100%, 10%);
+    color: hsl(0, 0%, 100%);
+}
+.standard button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(212, 100%, 10%);
+}
+
+/* Contact Us section */
+.contact-section{
+    position: relative;
+    display: grid;
+    grid-template-columns: 55rem;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 0;
+}
+.contactImg2{
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.contactImg1{
+    position: absolute;
+    top: -10rem;
+}
+.contact-section h2{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.contact-form{
+    background-color: hsla(212, 100%, 10%, 0.749);
+    border-radius: 30px;
+    box-shadow: inset 15px 15px 36px hsl(200, 99%, 29%),
+               inset -15px -15px 36px hsl(200, 100%, 19%);
+    padding: 2rem 5rem;
+}
+.client-name{
+    padding: 1rem 0;
+}
+.client-name label, .client-email label{
+    font-size: 1.3rem;
+    color: white;
+    font-family: "karla";
+}
+.client-name input,
+.client-email input{
+    width: 50%;
+    margin-left: .5rem;
+    padding: .5rem 0 .5rem 1rem;
+    border-radius: 100px;
+    border: none;
+}
+.client-name input:focus, .client-email input:focus{
+    background-color: hsl(200, 99%, 29%);
+    color: hsl(0, 0%, 100%);
+}
+.client-message{
+    margin: 1.5rem 0;
+}
+.client-message textarea{
+    border-radius: 10px;
+    padding: 2rem;
+    border: none;
+    width: 23rem;
+    height: 10rem;
+}
+.submit{
+    padding: .8rem 4rem;
+    border: none;
+    font-size: 1rem;
+    background-color: hsl(200, 87%, 57%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: .3s;
+}
+.submit:hover{
+    color: hsl(200, 87%, 57%);
+    background-color: hsl(0, 0%, 100%);
+    transition: .3s;
+}
+
+/* footer section */
+
+footer{
+    padding: 12rem 10% 0;
+    background-color: hsl(200, 100%, 19%);
+    margin-top: 3rem;
+    position: relative;
+}
+.footer-img{
+    margin-top: -4rem;
+}
+.footer-img img{
+    width: 17rem;
+}
+.footer-section{
+    margin-bottom: 2rem;
+    display: grid;
+        grid-template-columns: 25rem 15rem 1fr 1fr;
+}
+footer li{
+    padding-bottom: 1rem;
+}
+footer a{
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+footer a:hover{
+    color: hsl(200, 87%, 57%);
+}
+.social{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 4rem);
+}
+.social li i{
+        box-sizing: border-box;
+        text-align: center;
+}
+.copyright{
+    text-align: center;
+    margin: 0 -13%;
+    padding: 2rem 0 2rem;
+    background-color: hsl(212, 100%, 10%);
+}
+.copyright p{
+    color: hsl(0, 0%, 100%);
+}
+.copyright a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
