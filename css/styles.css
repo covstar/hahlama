@@ -58,7 +58,7 @@ nav {
 }
 .hamburger, .close{
     position: absolute;
-    right: 10%;
+    right: 5%;
     top: 2rem;
     display: none;
     cursor: pointer;
