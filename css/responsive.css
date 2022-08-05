@@ -301,7 +301,7 @@
     }
     .client-name input,
     .client-email input {
-        width: 70%;
+        width: 60%;
     }
     .client-message textarea {
         height: 10rem;
